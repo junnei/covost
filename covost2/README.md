@@ -16,6 +16,7 @@ language:
 - id
 - it
 - ja
+- ko
 - lv
 - mn
 - nl
