@@ -65,7 +65,7 @@ EN_XX_LANGUAGES = ["de", "tr", "fa", "sv-SE", "mn", "zh-CN", "cy", "ca", "sl", "
 # fmt: on
 
 COVOST_URL_TEMPLATE = "https://dl.fbaipublicfiles.com/covost/covost_v2.{src_lang}_{tgt_lang}.tsv.tar.gz"
-COVOST_KO_URL_TEMPLATE = "https://raw.githubusercontent.com/junnei/covost/refs/heads/main/data/{src_lang}_{tgt_lang}/covost_v2.{src_lang}_{tgt_lang}.tsv"
+COVOST_KO_URL_TEMPLATE = "https://raw.githubusercontent.com/junnei/covost/refs/heads/main/data/{src_lang}_{tgt_lang}/covost_v2.{src_lang}_{tgt_lang}.tsv.tar.gz"
 
 def _get_builder_configs():
     builder_configs = [
