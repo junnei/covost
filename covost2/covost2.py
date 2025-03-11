@@ -60,7 +60,7 @@ dataset = dataset.map(map_to_array, remove_columns=["file"])
 _HOMEPAGE = "https://github.com/facebookresearch/covost"
 
 # fmt: off
-XX_EN_LANGUAGES = ["fr", "de", "es", "ca", "it", "ru", "zh-CN", "pt", "fa", "et", "mn", "nl", "tr", "ar", "sv-SE", "lv", "sl", "ta", "ja", "id", "cy"]
+XX_EN_LANGUAGES = ["fr", "de", "es", "ca", "it", "ru", "zh-CN", "pt", "fa", "et", "mn", "nl", "tr", "ar", "sv-SE", "lv", "sl", "ta", "ja", "id", "cy", "ko"]
 EN_XX_LANGUAGES = ["de", "tr", "fa", "sv-SE", "mn", "zh-CN", "cy", "ca", "sl", "et", "id", "ar", "ta", "lv", "ja", "ko"]
 # fmt: on
 
@@ -87,7 +87,7 @@ class Covost2(datasets.GeneratorBasedBuilder):
 
     @property
     def manual_download_instructions(self):
-        return f"""Please download the Common Voice Corpus 4 in {self.config.name.split('_')[0]} from https://commonvoice.mozilla.org/en/datasets and unpack it with `tar xvzf {self.config.name.split('_')[0]}.tar`. Make sure to pass the path to the directory in which you unpacked the downloaded file as `data_dir`: `datasets.load_dataset('covost2', data_dir="path/to/dir")`
+        return f"""Please download the Common Voice Corpus {'20' if self.config.name.split('_')[0] == 'ko' else '4'} in {self.config.name.split('_')[0]} from https://commonvoice.mozilla.org/en/datasets and unpack it with `tar xvzf {self.config.name.split('_')[0]}.tar`. Make sure to pass the path to the directory in which you unpacked the downloaded file as `data_dir`: `datasets.load_dataset('covost2', data_dir="path/to/dir")`
         """
 
     def _info(self):
